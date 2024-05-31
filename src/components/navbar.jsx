@@ -16,7 +16,7 @@ function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   return (
-    <nav className="bg-white border-blue-500 border-t-1 ">
+    <nav className="bg-white border-blue-500 border-t-1 mt-3 sm:mt-4">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

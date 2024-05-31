@@ -13,7 +13,7 @@ const clearSearch = () => {
 };
 
   return (
-    <div className="px-5 py-8 mt-4 -mb-3 w-full max-w-screen-xl mx-auto bg-gray-200 flex flex-col items-center justify-center sm:rounded-xl">
+    <div className="px-5 py-8 mt-4 -mb-3 w-full max-w-screen-xl mx-auto bg-blue-100 flex flex-col items-center justify-center sm:rounded-xl">
       <h1 className="text-3xl font-semibold text-blue-800 mb-4">Find the most relevant content in the IT world</h1>
       <p className="text-md text-gray-600 mb-4">Articles, videos and more</p>
       <div className="flex items-center bg-white shadow-lg p-4 rounded-full w-full max-w-md">
