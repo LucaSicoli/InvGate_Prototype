@@ -19,22 +19,22 @@ function Footer() {
             <h3 className="text-lg font-semibold text-white underline-animation">Quick Links</h3>
             <ul className="mt-4 flex sm:flex-col flex-row sm:justify-center space-x-2">
               <li>
-                <a href="#" className="hover:underline text-gray-300">
+                <a href="https://github.com/Windsheear" target='next' className="hover:underline text-gray-300">
                   <FontAwesomeIcon icon={faHome} className="mr-2" /> Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline text-gray-300">
+                <a href="https://github.com/Windsheear" target='next' className="hover:underline text-gray-300">
                   <FontAwesomeIcon icon={faBriefcase} className="mr-2" /> Services
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline text-gray-300">
+                <a href="https://github.com/Windsheear" target='NEXT' className="hover:underline text-gray-300">
                   <FontAwesomeIcon icon={faProjectDiagram} className="mr-2" /> Portfolio
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline text-gray-300">
+                <a href="https://github.com/Windsheear" target='NEXT' className="hover:underline text-gray-300">
                   <FontAwesomeIcon icon={faLink} className="mr-2" /> Contact
                 </a>
               </li>
@@ -59,22 +59,22 @@ function Footer() {
             <h3 className="text-lg font-semibold text-white underline-animation">Follow Us</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <a href="#" className="hover:underline text-gray-300">
+                <a href="https://github.com/Windsheear" className="hover:underline text-gray-300">
                   <FontAwesomeIcon icon={faFacebook} className="mr-2" /> Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline text-gray-300">
+                <a href="https://github.com/Windsheear" className="hover:underline text-gray-300">
                   <FontAwesomeIcon icon={faTwitter} className="mr-2" /> Twitter
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline text-gray-300">
+                <a href="https://github.com/Windsheear" className="hover:underline text-gray-300">
                   <FontAwesomeIcon icon={faLinkedin} className="mr-2" /> LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline text-gray-300">
+                <a href="https://github.com/Windsheear" className="hover:underline text-gray-300">
                   <FontAwesomeIcon icon={faInstagram} className="mr-2" /> Instagram
                 </a>
               </li>

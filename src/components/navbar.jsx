@@ -15,15 +15,6 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
-  const handleDropdownClick = (itemName) => {
-    if (openDropdown && openDropdown !== itemName) {
-      setOpenDropdown(null);
-      setTimeout(() => setOpenDropdown(itemName), 0);
-    } else {
-      setOpenDropdown(openDropdown === itemName ? null : itemName);
-    }
-  };
-
   return (
     <nav className="bg-white border-blue-500 border-t-1 ">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
@@ -36,7 +27,7 @@ function Navbar() {
             </button>
           </div>
           <div className="flex sm:hidden justify-center w-full items-center">
-            <a href="#" className="text-blue-500 px-3 py-2 rounded-md text-lg font-poppins">Blue World</a>
+            <a href="https://github.com/Windsheear" target='next' className="text-blue-500 px-3 py-2 rounded-md text-lg font-poppins">Blue World</a>
           </div>
           <div className="hidden sm:flex items-center justify-between w-full">
             <div className="flex items-center space-x-4">
@@ -56,7 +47,7 @@ function Navbar() {
                          style={{ boxShadow: 'none', borderColor: 'transparent' }}>
                       <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         {item.options.map((option) => (
-                          <a key={option} href="#" className="block px-4 py-2 text-s text-blue-500 hover:bg-blue-300 hover:text-gray-900" role="menuitem">
+                          <a key={option} href="https://github.com/Windsheear" target='next' className="block px-4 py-2 text-s text-blue-500 hover:bg-blue-300 hover:text-gray-900" role="menuitem">
                             {option}
                           </a>
                         ))}
@@ -67,8 +58,8 @@ function Navbar() {
               ))}
             </div>
             <div className="flex items-center space-x-4">
-              <a href="#" className="text-blue-500 px-3 py-2 rounded-md text-lg font-poppins underline-animation">Contact Us</a>
-              <a href="#" className="bg-blue-500 rounded px-3 py-2 text-lg font-poppins text-white">Subscribe</a>
+              <a href="https://github.com/Windsheear" className="text-blue-500 px-3 py-2 rounded-md text-lg font-poppins underline-animation">Contact Us</a>
+              <a href="https://github.com/Windsheear" className="bg-blue-500 rounded px-3 py-2 text-lg font-poppins text-white">Subscribe</a>
               <FontAwesomeIcon icon={faGlobe} className="text-blue-500" />
             </div>
           </div>
