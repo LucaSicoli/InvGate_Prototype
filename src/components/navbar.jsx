@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronDown, faChevronUp, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const navigation = [
-  { name: <img src='./images/invgate-logo.png' alt='logo' className='h-8' />, href: '#', options: []},
   { name: 'Products', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
   { name: 'Solutions', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
   { name: 'Pricing', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
@@ -18,7 +17,7 @@ function Navbar() {
   return (
     <nav className="bg-white border-blue-500 border-t-1 mt-3 sm:mt-4">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-        <div className="relative flex items-center justify-between h-16">
+        <div className="relative flex items-center justify-center h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-blue-500 ml-4 mb-3 relative h-full">
               <span className="sr-only">Open main menu</span>
@@ -26,9 +25,7 @@ function Navbar() {
               <FontAwesomeIcon icon={faTimes} className={`absolute transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`} />
             </button>
           </div>
-          <div className="flex sm:hidden justify-center w-full items-center">
-            <a href="https://github.com/Windsheear" target='next' className="text-blue-500 px-3 py-2 rounded-md text-lg font-poppins">Blue World</a>
-          </div>
+          <img src='./images/invgate-logo.png' alt='logo' className='h-8 sm:mr-7' />
           <div className="hidden sm:flex items-center justify-between w-full">
             <div className="flex items-center space-x-4">
               {navigation.map((item) => (
@@ -66,7 +63,7 @@ function Navbar() {
         </div>
         <div className={`px-2 pt-2 pb-1 space-y-1 sm:hidden menu-transition ${isOpen ? 'open' : ''}`}>
           <div className="flex justify-center">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="flex flex-col items-center">
               {navigation.map((item) => (
                 <a key={item.name} href={item.href} className="block px-3 py-2 rounded-md text-base font-medium text-blue-500 hover:text-blue-800 hover:bg-blue-100">
                   {item.name}
