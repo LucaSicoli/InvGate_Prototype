@@ -59,8 +59,8 @@ function App() {
   return (
     <div>
       <Navbar />
-      <SearchComponent posts={blogPosts} />
-      <main className="p-8 -mt-4">
+      <main className="p-8 sm:p-13 mt-12">
+        <SearchComponent posts={blogPosts} />
         <RecentBlogPosts posts={blogPosts} />
         <PodcastSection episodes={podcastEpisodes} />
       </main>

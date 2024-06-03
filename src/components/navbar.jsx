@@ -15,17 +15,19 @@ function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   return (
-    <nav className="bg-white border-blue-500 border-t-1 mt-3 sm:mt-4">
+    <nav className="fixed top-0 bg-white w-full z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-        <div className="relative flex items-center justify-center h-16">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-blue-500 ml-4 mb-3 relative h-full">
-              <span className="sr-only">Open main menu</span>
-              <FontAwesomeIcon icon={faBars} className={`absolute transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
-              <FontAwesomeIcon icon={faTimes} className={`absolute transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`} />
-            </button>
+        <div className="relative flex items-center justify-between h-16 sm:justify-start">
+          <div className="flex items-center justify-between sm:justify-start w-full sm:w-auto pr-14 sm:pr-0">
+            <img src='./images/invgate-logo.png' alt='logo' className='h-8 pl-6 sm:pl-1 sm:mr-7' />
+            <div className="flex items-center sm:hidden">
+              <button onClick={() => setIsOpen(!isOpen)} className="text-blue-500 ml-4 mb-3 relative h-full">
+                <span className="sr-only">Open main menu</span>
+                <FontAwesomeIcon icon={faBars} className={`absolute transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
+                <FontAwesomeIcon icon={faTimes} className={`absolute transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`} />
+              </button>
+            </div>
           </div>
-          <img src='./images/invgate-logo.png' alt='logo' className='h-8 sm:mr-7' />
           <div className="hidden sm:flex items-center justify-between w-full">
             <div className="flex items-center space-x-4">
               {navigation.map((item) => (

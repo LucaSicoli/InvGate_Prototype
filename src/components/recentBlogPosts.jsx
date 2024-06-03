@@ -30,7 +30,7 @@ function RecentBlogPosts({ posts }) {
 
   return (
     <div className="p-8">
-      <header className="ml-6 text-2xl font-bold text-gray-700 mb-6">
+      <header className="ml-5 text-2xl font-bold text-gray-700 mb-6">
         Recent blog posts
       </header>
       <TransitionGroup className="grid grid-cols-1 md:grid-cols-2 gap-4">

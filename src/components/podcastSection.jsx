@@ -29,7 +29,7 @@ function PodcastSection({ episodes }) {
 
   return (
     <div className="p-8">
-      <header className="text-2xl font-bold text-gray-700 mb-6">
+      <header className="ml-5 text-2xl font-bold text-gray-700 mb-6">
         Hear Ticket Volume, our podcast of ITSM world
       </header>
       <TransitionGroup className="grid grid-cols-1 md:grid-cols-3 gap-4">
