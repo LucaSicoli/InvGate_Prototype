@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronDown, faChevronUp, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const navigation = [
-  { name: 'Blue World', href: '#', options: [] },
+  { name: <img src='./images/invgate-logo.png' alt='logo' className='h-8' />, href: '#', options: []},
   { name: 'Products', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
   { name: 'Solutions', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
   { name: 'Pricing', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
