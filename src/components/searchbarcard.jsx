@@ -16,7 +16,7 @@ const clearSearch = () => {
     <div className="px-5 py-10 mt-4 -mb-3 w-full sm:max-w-[92%] mx-auto sm:bg-blue-100 flex flex-col items-center justify-center sm:rounded-xl">
       <h1 className="text-3xl font-semibold text-blue-800 text-center mb-4">Find the most relevant content in the IT world</h1>
       <p className="text-md text-gray-600 mb-4">Articles, videos and more</p>
-      <div className="flex items-center bg-white shadow-lg p-4 rounded-full w-full max-w-md">
+      <div className="flex items-center bg-white shadow-lg p-4 rounded-full w-[110%] sm:w-[50%]">
         <FontAwesomeIcon icon={faSearch} className="text-blue-400 w-5 h-5 mr-4" />
         <input
           type="text"
