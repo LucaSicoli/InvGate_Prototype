@@ -45,7 +45,8 @@ function App() {
       description: "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?.",
       tags: ["Leadership", "Management"],
       image: "./images/card-1.jpeg",  // Asegúrate de tener una imagen real aquí
-      date: "17 Jan 2022"
+      date: "17 Jan 2022",
+      author: "Alec Whitten"
     },
     {
       id: 2,
@@ -53,7 +54,8 @@ function App() {
       description: "Mental models are simple expressions of complex processes or relationships.",
       tags: ["Product", "Research", "Frameworks"],
       image: "./images/card-2.jpeg",  // Asegúrate de tener una imagen real aquí
-      date: "16 Jan 2022"
+      date: "16 Jan 2022",
+      author: "Demi WIlkinson"
     },
     {
       id: 3,
@@ -61,7 +63,8 @@ function App() {
       description: "introduction to Wireframing and its principles. learn from the best in the insdustry",
       tags: ["Design", "Research"],
       image: "./images/card-3.jpeg",  // Asegúrate de tener una imagen real aquí
-      date: "15 Jan 2022"
+      date: "15 Jan 2022",
+      author: "Candice Wu"
     }
   ];
 

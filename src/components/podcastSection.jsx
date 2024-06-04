@@ -44,6 +44,7 @@ function PodcastSection({ episodes }) {
                 <img src={episode.image} alt={episode.title} className="w-full h-48 object-cover" />
               </div>
               <div className="p-4">
+                <p className="text-gray-500 text-xs">{episode.date} • {episode.author}</p>
                 <h3 className="text-lg font-semibold flex items-center justify-between">
                   {episode.title}
                   <a href={episode.link} target="_blank" rel="noopener noreferrer" className="ml-2 flex items-center">

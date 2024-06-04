@@ -46,11 +46,11 @@ function RecentBlogPosts({ posts }) {
               </div>
               <div className="p-6 flex flex-col justify-between md:w-1/2">
                 <div>
+                  <p className="text-gray-500 text-xs">{post.date} • {post.author}</p>
                   <h2 className="text-lg font-semibold flex justify-between items-center">
                     {post.title}
                     <FontAwesomeIcon icon={faArrowRight} className="text-blue-500 hover:text-blue-700 transform -rotate-45" />
                   </h2>
-                  <p className="text-gray-500 text-xs">{post.date} • {post.author}</p>
                   <p className="text-gray-600 mt-2">{post.summary}</p>
                 </div>
                 <div className="flex mt-4">
