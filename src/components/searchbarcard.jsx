@@ -28,7 +28,7 @@ const clearSearch = () => {
         {searchValue && (
           <FontAwesomeIcon 
             icon={faTimes} 
-            className="text-blue-400 w-4 h-4 mr-3 cursor-pointer transition-opacity duration-200" 
+            className="text-blue-400 w-3 h-4 mr-6 cursor-pointer transition-opacity duration-200" 
             onClick={clearSearch}
             style={{ opacity: searchValue ? 1 : 0 }}
           />
