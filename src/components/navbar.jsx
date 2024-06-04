@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronDown, faChevronUp, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
+
 const navigation = [
   { name: 'Products', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
   { name: 'Solutions', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
@@ -19,10 +20,10 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="relative flex items-center justify-between h-16 sm:justify-start">
           <div className="flex items-center justify-between sm:justify-start w-full sm:w-auto pr-14 sm:pr-0">
-            <img src='./images/invgate-logo.png' alt='logo' className='p-1 h-8 pl-6 sm:pl-1 sm:mr-7' />
+            <img src='./images/invgate-logo.png' alt='logo' className='p-1 h-8 w- pl-6 sm:pl-1 sm:mr-7' />
             <div className="flex items-center sm:hidden">
-              <FontAwesomeIcon icon={faGlobe} className="text-blue-500 w-5 mr-6 -mb-1 relative h-full" />
-              <button onClick={() => setIsOpen(!isOpen)} className="text-blue-500 ml-4 mb-4 relative h-full">
+              <FontAwesomeIcon icon={faGlobe} className="text-gray-700 w-5 mr-6 -mb-1 relative h-full" />
+              <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700 ml-4 mb-4 relative h-full">
                 <span className="sr-only">Open main menu</span>
                 <FontAwesomeIcon icon={faBars} size='lg' className={`absolute transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
                 <FontAwesomeIcon icon={faTimes} size='lg' className={`absolute transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`} />
@@ -68,7 +69,7 @@ function Navbar() {
           <div className="flex justify-center">
             <div className="flex flex-col items-center">
               {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="block px-3 py-2 rounded-md text-base font-medium text-blue-500 hover:text-blue-800 hover:bg-blue-100">
+                <a key={item.name} href={item.href} className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-blue-800 hover:bg-blue-100">
                   {item.name}
                 </a>
               ))}
