@@ -29,7 +29,7 @@ function RecentBlogPosts({ posts }) {
   const filteredPosts = filter ? posts.filter(post => post.tags.includes(filter)) : posts;
 
   return (
-    <div className="p-8">
+    <div className="p-8 -mt-7 sm:mt-6">
       <header className="ml-5 text-2xl font-bold text-gray-700 mb-6">
         Recent blog posts
       </header>
