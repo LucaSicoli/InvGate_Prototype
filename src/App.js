@@ -26,6 +26,15 @@ function App() {
       imageUrl: "./images/post-2.png",  // Asegúrate de tener una imagen real aquí
       author: "Olivia Rhye",
       date: "20 Jan 2022"
+    },
+    {
+      id: 3,
+      title: "Building your API Stack",
+      summary: "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag..",
+      tags: ["Design", "Research"],
+      imageUrl: "./images/post-3.png",  // Asegúrate de tener una imagen real aquí
+      author: "Lana Steiner",
+      date: "18 Jan 2022"
     }
   ];
 
