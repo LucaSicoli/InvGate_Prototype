@@ -59,7 +59,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <main className="p-8 sm:p-13 mt-12">
+      <main className="p-8 sm:p-13 mt-7 sm:mt-10">
         <SearchComponent posts={blogPosts} />
         <RecentBlogPosts posts={blogPosts} />
         <PodcastSection episodes={podcastEpisodes} />
