@@ -6,6 +6,8 @@ import RecentBlogPosts from './components/recentBlogPosts.jsx';
 import PodcastSection from './components/podcastSection.jsx';
 import './output.css';
 import Footer from './components/footerfin.jsx';
+import { Helmet } from 'react-helmet';
+import Header from './components/header.jsx';
 
 function App() {
   const blogPosts = [
@@ -70,6 +72,10 @@ function App() {
 
   return (
     <div>
+      <Helmet>
+        <title>Home | Invgate</title>
+        <meta name="description" content="Invgate is a revolutionary and helpfull space for designers, developers, and product managers to learn and grow." />
+      </Helmet>
       <Navbar />
       <main className="p-8 sm:p-13 mt-7 sm:mt-10">
         <SearchComponent posts={blogPosts} />

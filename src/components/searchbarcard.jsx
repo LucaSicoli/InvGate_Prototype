@@ -13,10 +13,10 @@ const clearSearch = () => {
 };
 
   return (
-    <div className="px-5 py-10 mt-4 -mb-3 w-full sm:max-w-[92%] mx-auto sm:bg-blue-100 flex flex-col items-center justify-center sm:rounded-xl">
+    <div className="px-5 py-10 mt-6 sm:mt-4 mb-7 sm:-mb-3 sm:max-w-[92%] mx-auto bg-blue-100 flex flex-col items-center justify-center rounded-xl">
       <h1 className="text-3xl font-semibold text-blue-800 text-center mb-4">Find the most relevant content in the IT world</h1>
       <p className="text-md text-gray-600 mb-4">Articles, videos and more</p>
-      <div className="flex items-center bg-white shadow-lg p-4 rounded-full w-[110%] sm:w-[40%]">
+      <div className="flex items-center bg-white shadow-lg p-4 rounded-full w-[100%] sm:w-[40%]">
         <FontAwesomeIcon icon={faSearch} className="text-blue-400 w-5 h-5 mr-4" />
         <input
           type="text"
@@ -34,6 +34,9 @@ const clearSearch = () => {
           />
         )}  
       </div>
+      {filteredPosts.length === 0 && searchValue.trim() !== '' && (
+        <p className="text-red-500 mt-2">No results found for "{searchValue}"</p>
+      )}
       
       <p className="text-xs text-gray-600 mt-4">We care about your data in our privacy policy</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full">

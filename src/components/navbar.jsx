@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronDown, faChevronUp, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
-
 const navigation = [
   { name: 'Products', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
   { name: 'Solutions', href: '#', options: ['Option 1', 'Option 2', 'Option 3'] },
@@ -73,6 +72,8 @@ function Navbar() {
                   {item.name}
                 </a>
               ))}
+              <a href="https://github.com/Windsheear" className="text-blue-500 px-3 py-2 rounded-md text-lg font-poppins underline-animation">Contact Us</a>
+              <a href="https://github.com/Windsheear" className="bg-blue-500 rounded px-3 py-2 text-lg font-poppins text-white">Subscribe</a>
             </div>
           </div>
         </div>

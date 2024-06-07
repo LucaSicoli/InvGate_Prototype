@@ -40,8 +40,12 @@ function PodcastSection({ episodes }) {
             classNames="item"
           >
             <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <div className="relative">
-                <img src={episode.image} alt={episode.title} className="w-full h-48 object-cover" />
+              <div style={{ width: '100%', paddingTop: '65%', position: 'relative' }}>
+                <img 
+                  src={episode.image} 
+                  alt={episode.title} 
+                  className="w-full h-full object-cover absolute top-0 left-0" 
+                />
               </div>
               <div className="p-4">
                 <p className="text-gray-500 text-xs">{episode.date} • {episode.author}</p>
