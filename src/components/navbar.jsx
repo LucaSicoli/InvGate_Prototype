@@ -29,7 +29,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 bg-white sm:bg-gray-100 p-1 w-full z-50">
+    <nav className="fixed top-0 font-open-sans tracking-wide bg-white sm:bg-gray-100 p-1 w-full z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="relative flex items-center justify-between h-16 sm:justify-start">
           <div className="flex items-center justify-between sm:justify-start w-full sm:w-auto pr-14 sm:pr-0">
@@ -44,33 +44,34 @@ function Navbar() {
             </div>
           </div>
 
-
+        
           {isOpen && (
-            <div className="absolute top-16 w-full left-0 bg-white shadow-md">
-              {navigation.map((item, index) => (
-                <div key={index}>
-                  <button onClick={() => setOpenDropdown(openDropdown === index ? null : index)} className="border-b w-full font-medium border-gray-200 text-gray-600 tracking-tight w-full text-center  py-2.5 hover:bg-gray-200 focus:outline-none">
-                    {item.name}
-                    {item.options.length > 0 && <FontAwesomeIcon icon={openDropdown === index ? faChevronUp : faChevronDown} className="ml-2" />}
-                  </button>
-                    {openDropdown === index && item.options.map((option, i) => (
-                    <a key={i} href={item.href} className="block text-center font-medium px-4 text-gray-900 py-2 hover:bg-gray-200">{option}</a>
-                  ))}
-                </div>
-                ))}
-                <div className="justify-center align center w-full flex flex-col">
-                  <a href="https://github.com/Windsheear" className="text-blue-500 sm:text-gray-500 px-3 py-2 rounded-md text-lg text-center font-poppins underline-animation">Contact Us</a>
-                  <a href="https://github.com/Windsheear" className="bg-blue-500 rounded px-3 py-2 text-lg text-center font-poppins text-white">Subscribe</a>  
-                </div>
-            </div>
-          )}
+  <div className="fixed top-16 left-0 w-full h-full bg-white shadow-md z-50">
+    {navigation.map((item, index) => (
+      <div key={index}>
+        <button onClick={() => setOpenDropdown(openDropdown === index ? null : index)} className="border-b w-full tracking-wide font-medium border-gray-200 text-gray-600 tracking-tight w-full text-center  py-2.5 hover:bg-gray-200 focus:outline-none">
+          {item.name}
+          {item.options.length > 0 && <FontAwesomeIcon icon={openDropdown === index ? faChevronUp : faChevronDown} className="ml-2" />}
+        </button>
+        {openDropdown === index && item.options.map((option, i) => (
+          <a key={i} href={item.href} className="block border-b border-gray-200 text-center font-medium px-4 text-gray-900 py-2 hover:bg-gray-200">{option}</a>
+        ))}
+      </div>
+    ))}
+    <div className="justify-center align center w-full flex flex-col">
+      <a href="https://github.com/Windsheear" className="text-blue-500 sm:text-gray-500 px-3 py-2 rounded-md text-lg text-center font-poppins underline-animation">Contact Us</a>
+      <a href="https://github.com/Windsheear" className="bg-blue-500 rounded px-3 py-2 text-lg text-center font-poppins text-white">Subscribe</a>  
+    </div>
+  </div>
+)}
+         
 
 
           <div className="hidden sm:flex items-center justify-between w-full">
             <div className="flex items-center space-x-4">
               {navigation.map((item) => (
                 <div className="relative" key={item.name}>
-                  <button onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)} className="text-gray-500 px-3 py-2 rounded-md text-lg font-poppins flex items-center hover:text-blue-800">
+                  <button onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)} className="text-gray-600 px-3 py-2 rounded-md text-md font-poppins flex items-center hover:text-gray-800">
                     {item.name}
                     {item.options.length > 0 && (
                       <div className="relative ml-1 flex items-center">
@@ -84,7 +85,7 @@ function Navbar() {
                          style={{ boxShadow: 'none', borderColor: 'transparent' }}>
                       <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         {item.options.map((option) => (
-                          <a key={option} href="https://github.com/Windsheear" target='next' className="block px-4 py-2 text-s text-blue-500 hover:bg-blue-300 hover:text-gray-900" role="menuitem">
+                          <a key={option} href="https://github.com/Windsheear" target='next' className="block px-4 py-2 text-s text-gray-500 hover:bg-gray-300 hover:text-gray-900" role="menuitem">
                             {option}
                           </a>
                         ))}

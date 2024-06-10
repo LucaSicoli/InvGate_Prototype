@@ -16,6 +16,19 @@ module.exports = {
           200: '#e0f2fe'
         },
       },
+      fontFamily: {
+        'century': ['Century', 'serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'open-sans': ['Open Sans', 'sans-serif'],
+        'lato': ['Lato', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'raleway': ['Raleway', 'sans-serif'],
+        'playfair': ['Playfair Display', 'serif'],
+        'merriweather': ['Merriweather', 'serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+        'oswald': ['Oswald', 'sans-serif'],
+        'source-sans-pro': ['Source Sans Pro', 'sans-serif']
+      }
     },
   },
   plugins: [],
