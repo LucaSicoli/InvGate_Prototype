@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronDown, faChevronUp, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,6 +13,7 @@ const navigation = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const navRef = useRef();
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,8 +29,26 @@ function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 0) {
+        navRef.current.classList.add('shadow-md');
+      } else {
+        navRef.current.classList.remove('shadow-md');
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
+
+
   return (
-    <nav className="fixed top-0 font-open-sans tracking-wide bg-white sm:bg-gray-100 p-1 w-full z-50">
+    <nav ref={navRef} className="fixed top-0 font-open-sans tracking-wide bg-white sm:bg-gray-100 p-1 w-full z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="relative flex items-center justify-between h-16 sm:justify-start">
           <div className="flex items-center justify-between sm:justify-start w-full sm:w-auto pr-14 sm:pr-0">

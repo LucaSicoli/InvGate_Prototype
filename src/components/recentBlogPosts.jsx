@@ -40,7 +40,7 @@ function RecentBlogPosts({ posts }) {
             timeout={500}
             classNames="item"
           >
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden flex md:flex-row flex-col h-64">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row h-auto md:h-64">
               <div className="md:w-1/2">
                 <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover" />
               </div>
