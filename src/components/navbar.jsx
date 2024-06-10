@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronDown, faChevronUp, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,8 +14,22 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth > 768) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <nav className="fixed top-0 bg-white p-1 w-full z-50">
+    <nav className="fixed top-0 bg-white sm:bg-gray-100 p-1 w-full z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="relative flex items-center justify-between h-16 sm:justify-start">
           <div className="flex items-center justify-between sm:justify-start w-full sm:w-auto pr-14 sm:pr-0">
@@ -29,11 +43,34 @@ function Navbar() {
               </button>
             </div>
           </div>
+
+
+          {isOpen && (
+            <div className="absolute top-16 w-full left-0 bg-white shadow-md">
+              {navigation.map((item, index) => (
+                <div key={index}>
+                  <button onClick={() => setOpenDropdown(openDropdown === index ? null : index)} className="border-b w-full font-medium border-gray-200 text-gray-600 tracking-tight w-full text-center  py-2.5 hover:bg-gray-200 focus:outline-none">
+                    {item.name}
+                    {item.options.length > 0 && <FontAwesomeIcon icon={openDropdown === index ? faChevronUp : faChevronDown} className="ml-2" />}
+                  </button>
+                    {openDropdown === index && item.options.map((option, i) => (
+                    <a key={i} href={item.href} className="block text-center font-medium px-4 text-gray-900 py-2 hover:bg-gray-200">{option}</a>
+                  ))}
+                </div>
+                ))}
+                <div className="justify-center align center w-full flex flex-col">
+                  <a href="https://github.com/Windsheear" className="text-blue-500 sm:text-gray-500 px-3 py-2 rounded-md text-lg text-center font-poppins underline-animation">Contact Us</a>
+                  <a href="https://github.com/Windsheear" className="bg-blue-500 rounded px-3 py-2 text-lg text-center font-poppins text-white">Subscribe</a>  
+                </div>
+            </div>
+          )}
+
+
           <div className="hidden sm:flex items-center justify-between w-full">
             <div className="flex items-center space-x-4">
               {navigation.map((item) => (
                 <div className="relative" key={item.name}>
-                  <button onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)} className="text-blue-500 px-3 py-2 rounded-md text-lg font-poppins flex items-center hover:text-blue-800">
+                  <button onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)} className="text-gray-500 px-3 py-2 rounded-md text-lg font-poppins flex items-center hover:text-blue-800">
                     {item.name}
                     {item.options.length > 0 && (
                       <div className="relative ml-1 flex items-center">
@@ -61,19 +98,6 @@ function Navbar() {
               <a href="https://github.com/Windsheear" className="text-blue-500 px-3 py-2 rounded-md text-lg font-poppins underline-animation">Contact Us</a>
               <a href="https://github.com/Windsheear" className="bg-blue-500 rounded px-3 py-2 text-lg font-poppins text-white">Subscribe</a>
               <FontAwesomeIcon icon={faGlobe} className="text-blue-500" />
-            </div>
-          </div>
-        </div>
-        <div className={`px-2 pt-2 pb-1 space-y-1 sm:hidden menu-transition ${isOpen ? 'open' : ''}`}>
-          <div className="flex justify-center">
-            <div className="flex flex-col items-center">
-              {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="block px-3 py-2 rounded-md text-base font-medium text-gray-500 hover:text-blue-800 hover:bg-blue-100">
-                  {item.name}
-                </a>
-              ))}
-              <a href="https://github.com/Windsheear" className="text-blue-500 px-3 py-2 rounded-md text-lg font-poppins underline-animation">Contact Us</a>
-              <a href="https://github.com/Windsheear" className="bg-blue-500 rounded px-3 py-2 text-lg font-poppins text-white">Subscribe</a>
             </div>
           </div>
         </div>

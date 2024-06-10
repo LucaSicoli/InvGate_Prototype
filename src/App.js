@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/navbar.jsx';
-import SearchComponent from './components/searchbarcard.jsx';
 import RecentBlogPosts from './components/recentBlogPosts.jsx';
 import PodcastSection from './components/podcastSection.jsx';
 import './output.css';
@@ -71,14 +70,15 @@ function App() {
   ];
 
   return (
-    <div>
+    <div className='bg-gray-100'>
       <Helmet>
         <title>Home | Invgate</title>
         <meta name="description" content="Invgate is a revolutionary and helpfull space for designers, developers, and product managers to learn and grow." />
+        <link rel='icon' href='./images/invgate-logo.png' type='image/x-icon' />
       </Helmet>
       <Navbar />
-      <main className="p-8 sm:p-13 mt-7 sm:mt-10">
-        <SearchComponent posts={blogPosts} />
+      <main className="px-1 py-10 sm:p-8 sm:p-13 mt-8 sm:mt-10">
+        <Header posts={blogPosts} />
         <RecentBlogPosts posts={blogPosts} />
         <PodcastSection episodes={podcastEpisodes} />
       </main>
