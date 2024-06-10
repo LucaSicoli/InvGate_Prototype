@@ -74,7 +74,7 @@ function App() {
       <Helmet>
         <title>Home | Invgate</title>
         <meta name="description" content="Invgate is a revolutionary and helpfull space for designers, developers, and product managers to learn and grow." />
-        <link rel='icon' href='./images/head-logo.jpg' type='image/x-icon' />
+        <link rel='icon' href='./images/invgate-head.webp' type='image/x-icon' />
       </Helmet>
       <Navbar />
       <main className="px-1 py-10 sm:p-8 sm:p-13 mt-8 sm:mt-10">
