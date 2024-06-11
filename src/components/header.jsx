@@ -40,39 +40,39 @@ const Header = ({ posts }) => {
             {filteredPosts.length === 0 && searchValue.trim() !== '' && (
               <p className="text-red-500 mt-2">No results found for "{searchValue}"</p>
             )}
-                        <p className="text-md text-gray-600 mt-4">We care about your data in our privacy policy</p>
-                    </div>
-                    <div className="flex-1 hidden md:block">
-                        <video src="./images/hero.webm" autoPlay muted loop alt="IT World Illustration" className="max-w-xl mx-auto"/>
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full">
-                    {filteredPosts.map((post, index) => (
-                        <div
-                            key={post.id}
-                            className="bg-white shadow-lg rounded-lg overflow-hidden transition-opacity duration-900 ease-in-out"
-                            style={{ opacity: 0, animation: `fadeIn 0.5s ease forwards ${index * 0.1}s` }}
-                        >
-                            <img src={post.imageUrl} alt={post.title} className="w-full h-56 object-cover" />
-                            <div className="p-6">
-                                <h4 className="text-xl font-semibold mb-2">{post.title}</h4>
-                                <p className="text-gray-600 mb-4">{post.summary}</p>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {post.tags.map(tag => (
-                                        <span key={tag} className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">{tag}</span>
-                                    ))}
-                                </div>
-                                <div className="text-gray-500 text-xs">
-                                    <span>{post.author} • </span>
-                                    <span>{post.date}</span>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <p className="text-md text-gray-600 mt-4">We care about your data in our privacy policy</p>
+          </div>
+          <div className="flex-1 hidden md:block">
+            <video src="./images/hero.webm" autoPlay muted loop alt="IT World Illustration" className="max-w-xl mx-auto"/>
+          </div>
         </div>
-    );
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full">
+          {filteredPosts.map((post, index) => (
+            <div
+              key={post.id}
+              className="bg-white shadow-lg rounded-lg overflow-hidden transition-opacity duration-900 ease-in-out"
+              style={{ opacity: 0, animation: `fadeIn 0.5s ease forwards ${index * 0.1}s` }}
+            >
+              <img src={post.imageUrl} alt={post.title} className="w-full h-56 object-cover" />
+              <div className="p-6">
+                <h4 className="text-xl font-semibold mb-2">{post.title}</h4>
+                <p className="text-gray-600 mb-4">{post.summary}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {post.tags.map(tag => (
+                    <span key={tag} className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">{tag}</span>
+                  ))}
+                </div>
+                <div className="text-gray-500 text-xs">
+                  <span>{post.author} • </span>
+                  <span>{post.date}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Header;
